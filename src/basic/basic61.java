@@ -2,7 +2,8 @@ package basic;
 
 import java.util.Scanner;
 
-
+//4 12
+//2 4 6 8
 //특정수 만들기 (MS 인터뷰)
 public class basic61 {
     // 받을 값
