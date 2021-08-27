@@ -2,51 +2,51 @@ package basic;
 
 import java.util.Arrays;
 
-public class MergeSortExample {
-
+public class MergeSortTest {
     public static void main(String[] args) {
-        int[] testArr = {25, 34, 22, 3, 7, 9, 10, 24, 17, 15, 1};
+        int[] arr = {34, 17, 9, 4, 51, 6, 8, 9, 12, 11, 30};
 
-        mergeSort(testArr, 0, testArr.length - 1);
-        System.out.println(Arrays.toString(testArr));
+        mergeSort(arr, 0, arr.length - 1);
+
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void mergeSort(int[] arr, int start, int end) {
         if (start < end) {
             int mid = (start + end) / 2;
-            // divide and conquer 분할정복
             mergeSort(arr, start, mid);
             mergeSort(arr, mid + 1, end);
             merge(arr, start, mid, end);
         }
+
+
     }
 
     public static void merge(int[] arr, int start, int mid, int end) {
         int i = start;
         int j = mid + 1;
-        int k = start; // 임시 배열 인덱스
+        int index = start;
 
         int[] temp = new int[arr.length];
 
         while (i <= mid && j <= end) {
-            if (arr[i] <= arr[j]) {
-                temp[k++] = arr[i++];
+            if (arr[i] < arr[j]) {
+                temp[index++] = arr[i++];
             } else {
-                temp[k++] = arr[j++];
+                temp[index++] = arr[j++];
             }
         }
-
         while (i <= mid) {
-            temp[k++] = arr[i++];
+            temp[index++] = arr[i++];
         }
 
         while (j <= end) {
-            temp[k++] = arr[j++];
+            temp[index++] = arr[j++];
         }
 
-        for (int m = start; m <= end; m++) {
-            arr[m] = temp[m];
+        for (int a = start; a <= end; a++) {
+            arr[a] = temp[a];
         }
+
     }
-
 }
