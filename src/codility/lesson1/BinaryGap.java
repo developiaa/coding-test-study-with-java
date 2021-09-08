@@ -1,8 +1,6 @@
-package codility.lession1;
+package codility.lesson1;
 
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class BinaryGap {

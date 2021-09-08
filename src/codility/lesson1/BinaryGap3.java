@@ -1,4 +1,4 @@
-package codility.lession1;
+package codility.lesson1;
 
 public class BinaryGap3 {
 
