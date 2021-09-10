@@ -22,8 +22,10 @@ public class PermutationTest {
         }
 
         for (int i = depth; i < n; i++) {
+            //하나를 고정시켜주고 나머지들의 위치를 변경한다.
             swap(arr, depth, i);
             permutation(arr, depth + 1, n, r);
+            //이전 상태로 위치를 돌려주어야 순열이 제대로 동작한다.
             swap(arr, depth, i);
         }
     }
