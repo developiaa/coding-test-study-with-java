@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class Triangle {
     public static void main(String[] args) {
-        int[] A = {10, 2, 5, 1, 8, 20};
+//        int[] A = {10, 2, 5, 1, 8, 20};
+        int[] A = {-2147483648, -2147483647, -2147483641};
         System.out.println(solution(A));
     }
 
