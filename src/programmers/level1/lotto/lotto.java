@@ -1,4 +1,4 @@
-package programmers.practice.lotto;
+package programmers.level1.lotto;
 
 import java.util.*;
 
