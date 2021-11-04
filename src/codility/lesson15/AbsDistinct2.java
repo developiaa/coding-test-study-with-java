@@ -27,6 +27,8 @@ public class AbsDistinct2 {
             }
 
 
+            // A[head], A[tail] 절대값을 비교한다.
+            // long으로 비교해야하는 이유는 정수 범위를 넘어가기 때문이다.
             long absHead = Math.abs(Long.valueOf(A[head]));
             long absTail = Math.abs(Long.valueOf(A[tail]));
 
