@@ -15,7 +15,7 @@ public class Solution2 {
     private static final int dx[] = {0, -1, 1, 0};
     private static final int dy[] = {-1, 0, 0, 1};
 
-    private boolean isNextToVolunteer(char[][] room, int x, int y, int exclude) {
+    private static boolean isNextToVolunteer(char[][] room, int x, int y, int exclude) {
         for (int d = 0; d < 4; d++) {
             if (d == exclude) continue;
 
@@ -28,7 +28,7 @@ public class Solution2 {
         return false;
     }
 
-    private boolean isDistanced(char[][] room, int x, int y) {
+    private static boolean isDistanced(char[][] room, int x, int y) {
         for (int d = 0; d < 4; d++) {
             int nx = x + dx[d];
             int ny = y + dy[d];
@@ -45,7 +45,7 @@ public class Solution2 {
         return true;
     }
 
-    private boolean isDistanced(char[][] room) {
+    private static boolean isDistanced(char[][] room) {
         for (int y = 0; y < room.length; y++) {
             for (int x = 0; x < room[y].length; x++) {
                 if (room[y][x] != 'P') continue;
@@ -55,7 +55,7 @@ public class Solution2 {
         return true;
     }
 
-    public int[] solution(String[][] places) {
+    public static int[] solution(String[][] places) {
         int[] answer = new int[places.length];
         for (int i = 0; i < answer.length; i++) {
             String[] place = places[i];
