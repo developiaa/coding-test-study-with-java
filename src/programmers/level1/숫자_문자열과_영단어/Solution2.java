@@ -1,9 +1,5 @@
 package programmers.level1.숫자_문자열과_영단어;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class Solution2 {
     public static void main(String[] args) {
