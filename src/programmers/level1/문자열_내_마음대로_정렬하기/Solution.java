@@ -4,8 +4,10 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        String[] strings = {"sun", "bed", "car"};
-        int n = 1; // {"car","bed","sun"}
+//        String[] strings = {"sun", "bed", "car"};
+        String[] strings = {"abce", "abcd", "cdx"};
+//        int n = 1; // {"car","bed","sun"}
+        int n = 2; // {"abcd","abce","cdx"}
         System.out.println(Arrays.toString(solution(strings, n)));
     }
 
