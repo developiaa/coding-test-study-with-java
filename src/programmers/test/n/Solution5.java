@@ -5,9 +5,9 @@ import java.util.Set;
 
 public class Solution5 {
     public static void main(String[] args) {
-//        String S = "azABaabza"; // ABaab 5
+        String S = "azABaabza"; // ABaab 5
 //        String S = "TacoCat"; // -1
-        String S = "AcZCbaBz"; // 8
+//        String S = "AcZCbaBz"; // 8
 //        String S = "abcdefghijklmnopqrstuvwxyz"; // -1
 
         System.out.println(solution(S));
@@ -18,9 +18,9 @@ public class Solution5 {
         for (int i = 0; i < S.length(); i++) {
             for (int k = i + 1; k <= S.length(); k++) {
                 String substring = S.substring(i, k);
-                System.out.println("i=" + i + " ,k=" + k + "  " + substring);
+//                System.out.println("i=" + i + " ,k=" + k + "  " + substring);
                 if (isBalanced(substring)) {
-//                    System.out.println("i=" + i + " ,k=" + k + "  " + substring);
+                    System.out.println("i=" + i + " ,k=" + k + "  " + substring);
                     if (count < substring.length()) {
                         count = substring.length();
                     }
@@ -42,6 +42,10 @@ public class Solution5 {
                 small.add(String.valueOf(s.charAt(i)));
             }
         }
+
+
+        System.out.println(small);
+        System.out.println(big);
 
         for (String s1 : small) {
             if (!big.contains(s1.toUpperCase())) {

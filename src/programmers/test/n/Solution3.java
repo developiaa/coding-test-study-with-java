@@ -61,7 +61,7 @@ public class Solution3 {
             //뽑을 숫자만큼 다 뽑았다면 출력하고 종료
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < answer.length; i++) {
-                sb.append(String.valueOf(answer[i]));
+                sb.append(answer[i]);
             }
 
             set.add(sb.toString());

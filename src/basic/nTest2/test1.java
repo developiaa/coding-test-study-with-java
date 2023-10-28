@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
+@Deprecated
 public class test1 {
     public static void main(String[] args) {
 //        String S = "011100";

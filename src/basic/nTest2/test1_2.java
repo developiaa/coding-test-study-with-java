@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Deprecated
 public class test1_2 {
     public static void main(String[] args) {
 //        String S = "011100";

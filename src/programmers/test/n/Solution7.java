@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+// leetcode 1404랑 유사함
+@Deprecated(since = "큰 수는 안되는 듯")
 public class Solution7 {
     public static void main(String[] args) {
 //        String S = "011100"; // 7

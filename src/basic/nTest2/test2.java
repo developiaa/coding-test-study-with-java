@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Deprecated
 public class test2 {
     public static void main(String[] args) {
         int[] A = {6, 1, 4, 6, 3, 2, 7, 4};
