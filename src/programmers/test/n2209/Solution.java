@@ -9,9 +9,9 @@ public class Solution {
 //        int N = 0; //50
 //        int N = -999; //-5999
 //        int N = -111; //-1115
-//        int N = -151; //-1515
-        int N = -146; //-1456
-        System.out.println(solution(N));
+        int N = -151; //-1515
+//        int N = -146; //-1456
+        System.out.println(solution2(N));
     }
 
     public static int solution(int N) {
@@ -35,5 +35,19 @@ public class Solution {
             }
         }
         return Integer.parseInt(s + "5");
+    }
+
+    public static int solution2(int N) {
+        String s = String.valueOf(N);
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i <= s.length(); i++) {
+            StringBuilder temp = new StringBuilder(s);
+            if (N < 0 && i == 0) {
+                continue;
+            }
+            temp.insert(i, '5');
+            max = Math.max(max, Integer.parseInt(temp.toString()));
+        }
+        return max;
     }
 }

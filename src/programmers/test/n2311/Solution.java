@@ -10,10 +10,10 @@ public class Solution {
 //        int n = -5859; // -589
 //        int n = -5000; // 0
 //        int n = -515;
-//        int n = 515;
-//        int n = -595;
-        int n = 595;
-        System.out.println(solution(n));
+//        int n = 515; //51
+//        int n = -595; //-59
+        int n = 595; //95
+        System.out.println(solution2(n));
     }
 
     public static int solution(int N) {
@@ -48,5 +48,19 @@ public class Solution {
             index = s.indexOf(find, index + find.length());
         }
         return list;
+    }
+
+    public static int solution2(int N) {
+        String s = String.valueOf(N);
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < s.length(); i++) {
+            StringBuilder stringBuilder = new StringBuilder(s);
+            if (stringBuilder.charAt(i) == '5') {
+                stringBuilder.delete(i, i + 1);
+                max = Math.max(max, Integer.parseInt(stringBuilder.toString()));
+            }
+        }
+        return max;
     }
 }
