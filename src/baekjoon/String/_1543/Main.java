@@ -1,29 +1,32 @@
-package baekjoon._1543;
+package baekjoon.String._1543;
 
 import java.util.Scanner;
 
-public class Main_review {
+// 문서 검색
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String doc = sc.next();
         String word = sc.next();
 
+        int wordLength = word.length();
         int count = 0;
         for (int i = 0; i < doc.length(); i++) {
-            boolean flag = true;
-            for (int j = 0; j < word.length(); j++) {
+            boolean isMatch = true;
+            for (int j = 0; j < wordLength; j++) {
                 if (i + j >= doc.length() || doc.charAt(i + j) != word.charAt(j)) {
-                    flag = false;
+                    isMatch = false;
                     break;
                 }
             }
 
-            if (flag) {
+            if (isMatch) {
                 count++;
-                i += word.length() - 1;
+                i += wordLength - 1;
             }
         }
 
-        System.out.println(count);
+        System.out.println("count = " + count);
+
     }
 }

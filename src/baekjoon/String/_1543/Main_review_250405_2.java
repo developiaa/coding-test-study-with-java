@@ -1,27 +1,25 @@
-package baekjoon._1543;
+package baekjoon.String._1543;
 
 import java.util.Scanner;
 
-// 문서 검색
-public class Main2 {
+public class Main_review_250405_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String doc = sc.nextLine();
+        String str = sc.nextLine();
         String word = sc.nextLine();
 
         int startIndex = 0;
-        int count = 0;
-
+        int answer = 0;
         while (true) {
-            int findIndex = doc.indexOf(word, startIndex);
-            if (findIndex < 0) {
+            int findIndex = str.indexOf(word, startIndex);
+            if (findIndex == -1) {
                 break;
             }
 
             startIndex = findIndex + word.length();
-            count++;
+            answer++;
         }
 
-        System.out.println(count);
+        System.out.println(answer);
     }
 }
