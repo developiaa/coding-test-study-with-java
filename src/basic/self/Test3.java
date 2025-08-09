@@ -49,7 +49,7 @@ public class Test3 {
 
         List<String> topKWords = findTopK(words, k);
         System.out.println(topKWords); // [i, java]
-        System.out.println(findTop(words, k));
+//        System.out.println(findTop(words, k));
         System.out.println(findTop2(words, k));
 
         String[] words2 = {"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
@@ -57,6 +57,8 @@ public class Test3 {
         // 빈도수: "the"(4), "is"(3), "sunny"(2), "day"(1)
         List<String> topKWords2 = findTopK(words2, k2);
         System.out.println(topKWords2); // [the, is, sunny]
+        System.out.println(findTop2(words2, k2));
+
     }
 
 
@@ -80,9 +82,13 @@ public class Test3 {
                         Collectors.summingInt(_ -> 1)));
 
         List<String> sortedList = new ArrayList<>(collect.keySet()).stream()
-                .sorted((o1, o2) -> collect.get(o2) - collect.get(o1))
+                .sorted((o1, o2) -> {
+                    if (!Objects.equals(collect.get(o2), collect.get(o1))) {
+                        return collect.get(o2) - collect.get(o1);
+                    }
+                    return o1.compareTo(o2);
+                })
                 .toList();
-
         return sortedList.subList(0, k);
     }
 }
