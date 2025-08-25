@@ -21,7 +21,7 @@ public class Main2 {
 
         int ans = 0;
         for (int i = 1; i <= (X - 1) / 2; i++) {
-            if (i <= 1000000 && X - i <= 1000000) {
+            if (i <= 1000_000 && X - i <= 1000000) {
                 ans += (exist[i] && exist[X - i]) ? 1 : 0;
             }
         }
