@@ -33,9 +33,9 @@ public class Solution {
         }
 
         public void postTweet(int userId, int tweetId) {
-            if (!followMap.containsKey(userId)) {
-                followMap.put(userId, new HashSet<>());
-            }
+//            if (!followMap.containsKey(userId)) {
+//                followMap.put(userId, new HashSet<>());
+//            }
 
             // 새 트윗 생성 및 연결 리스트의 Head로 추가 (가장 최근 트윗)
             Tweet newTweet = new Tweet(tweetId);
